@@ -29,32 +29,32 @@ Steps:
     }
 
 2. Controllers.php:
-    <?php
+<?php
 
-    namespace App\Http\Controllers;
+namespace App\Http\Controllers;
 
-    use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-    use Illuminate\Foundation\Validation\ValidatesRequests;
-    use Illuminate\Routing\Controller as BaseController;
-        /**
-        * @OA\Info(
-        *    title="Swagger with Laravel",
-        *    version="1.0.0",
-        * )
-        */
-    class Controller extends BaseController
-    {
-        use AuthorizesRequests, ValidatesRequests;
-    }
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
+    /**
+    * @OA\Info(
+    *    title="Swagger with Laravel",
+    *    version="1.0.0",
+    * )
+    */
+class Controller extends BaseController
+{
+    use AuthorizesRequests, ValidatesRequests;
+}
 
 3. api.php :
-    <?php
+<?php
 
-    use App\Http\Controllers\Api\TestController;
-    use Illuminate\Http\Request;
-    use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\TestController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
-    Route::get('/test',[TestController::class,'test']);
+Route::get('/test',[TestController::class,'test']);
 
 * Browser URL
     http://127.0.0.1:8000/api/documentation
