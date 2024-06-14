@@ -1,10 +1,9 @@
 Steps:
-    composer require zircote/swagger-php
-    composer require darkaonline/l5-swagger
-    php artisan vendor:publish --provider "L5Swagger\L5SwaggerServiceProvider"
-    php artisan make:controller Api/TestController
-    php artisan l5-swagger:generate
-
+    •	composer require zircote/swagger-php
+    •	composer require darkaonline/l5-swagger
+    •	php artisan vendor:publish --provider "L5Swagger\L5SwaggerServiceProvider"
+    •	php artisan make:controller Api/TestController
+    •	php artisan l5-swagger:generate
 
 
 1. TestController.php:
